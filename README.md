@@ -55,28 +55,11 @@ The following command-line parameters can be used to customize the operation of 
 - gpusetdevice (default=1)
 
 
-###Dependency
+### Dependency
 
-This script requires trained .
-Running the `example.lua` or the snippet will automatically create the model
-and download other files.
-
-```bash
-git clone https://github.com/jhjin/overfeat-torch
-cd overfeat-torch
-. install.sh
-th run.lua
-mv model.t7 bee.jpg overfeat_label.lua ..
-cd ..
-```
+- Model and data files need to be made available*
 
 
 ### Example
 
-The example script predicts the output category of original and its adversarial examples.
-
-```bash
-th example.lua
-```
-
-![](example.png)
+- Make available a sample script to give a demo of the code-run* (similar to the .sh files)
