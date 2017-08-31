@@ -29,10 +29,11 @@ The following command-line parameters can be used to customize the operation of 
         - list_labels = '#dataset/overfeat_label.lua',
 
 - path_model 
-    - pass a single-entry table containing the path to model wts. for standard architectures (VGG/Overfeat): '{"#overfeat-torch/model.net"}'
-    - pass a 2-entry table containing the path to the prototxt and wt. file for caffe models :
+    - pass a single-entry table containing the path to model wts. for standard architectures (VGG/Overfeat): <br/>
+    '{"#overfeat-torch/model.net"}'
+    - pass a 2-entry table containing the path to the prototxt and wt. file for caffe models :<br/>
       '{"#models/imagenet-vgg19/VGG_ILSVRC_19_layers_deploy.prototxt","#models/imagenet-vgg19/VGG_ILSVRC_19_layers.caffemodel"}'
-    - pass a multi-entry table containing the path to sub-model wts. for [attention-mounted archi.]():
+    - pass a multi-entry table containing the path to sub-model wts. for [attention-mounted archi.]():<br/>
       '{"#models/cubs-2level-1global/mlocal_1.net","#models/cubs-2level-1global/mlocal_2.net",
        "#models/cubs-2level-1global/mglobal_2.net","#models/cubs-2level-1global/matten_1.net",
        "#models/cubs-2level-1global/matten_2.net","#models/cubs-2level-1global/mmatch.net"}'
