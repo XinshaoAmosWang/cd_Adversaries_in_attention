@@ -44,14 +44,10 @@ The following command-line parameters can be used to customize the operation of 
     - 0 for models with no inbuilt attention
     - 1/2/3 for models with attention at 1/2/3 levels
 - batch_size int
-- image_size int
-    - should match with the acceptable input size for the incoming models
-- norm_range int (default=1)
-    - for variance normalization
-- noise_intensity int (deafult=1)
-    - L-inf norm for gradient sign
-- path_save
-    - folder names where the adversaries should be saved
+- image_size int: should match with the acceptable input size for the incoming models
+- norm_range int (default=1): for variance normalization
+- noise_intensity int (deafult=1): L-inf norm for gradient sign
+- path_save: folder names where the adversaries should be saved
 - mean = '{118.380948/255}',   -- global mean used to train overfeat
 - std = '{61.896913/255}',     -- global std used to train overfeat
 - platformtype = 'cuda',
