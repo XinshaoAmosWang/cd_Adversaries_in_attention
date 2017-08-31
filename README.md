@@ -22,11 +22,11 @@ The following command-line parameters can be used to customize the operation of 
     - 'evaluate' to evaluate the robustness of given model to adversarial perturbations to input images
 - mode
     - 'unproc' for receiving unnormalized (not normalized for mean and std-dev) images available in raw format in a given folder
-        - path_img = 'data.t7',
-    - 'preproc' for receiving normalized images available in t7 format
         - path_label = '#dataset/label_gt.lua', -- label file (in order*)
         - path_img = '#dataset/image_gt.lua', -- image file (in order*)
-        - list_labels = '#dataset/overfeat_label.lua',
+        - list_labels = '#dataset/label_names.lua',
+    - 'preproc' for receiving normalized images available in t7 format
+        - path_img = 'data.t7',
 
 - path_model 
     - pass a single-entry table containing the path to model wts. for standard architectures (VGG/Overfeat): <br/>
@@ -48,21 +48,12 @@ The following command-line parameters can be used to customize the operation of 
 - norm_range int (default=1): for variance normalization
 - noise_intensity int (deafult=1): L-inf norm for gradient sign
 - path_save: folder names where the adversaries should be saved
-- mean = '{118.380948/255}',   -- global mean used to train overfeat
-- std = '{61.896913/255}',     -- global std used to train overfeat
-- platformtype = 'cuda',
-- gpumode = 1,
-- gpusetdevice = 1,
+- mean (default='{118.380948/255}'): global mean used to train overfeat
+- std  (default='{61.896913/255}'): global std used to train overfeat
+- platformtype (default='cuda')
+- gpumode (0 for cpu/ 1 for gpu)
+- gpusetdevice (default=1)
 
-
-The script can be provided the following inputs:
-- mode: preproc: Path to the image folder which contains images for generating adversarial examples on. Things to check inside the code for this:
-	-- Size of the input image which needs to match the input layer of the architecture
-	-- Mean (for subtraction)
-	-- Standard deviation (for division)
-	-- Path to the ground truth labels (if not available with the images)
-- mode: unproc: Path to the t7 file containing images and labels (both)
-- Path of the trained model
 
 ###Dependency
 
