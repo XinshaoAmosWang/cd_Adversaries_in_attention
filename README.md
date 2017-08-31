@@ -55,11 +55,11 @@ The following command-line parameters can be used to customize the operation of 
 - gpusetdevice (default=1)
 
 
-### Dependency
+## Dependency
 
 - Model and data files need to be made available*
 
 
-### Example
+## Example
 
-- Make available a sample script to give a demo of the code-run* (similar to the .sh files)
+- Make available a sample script to give a demo of the code-run* (similar to the .sh files)*
